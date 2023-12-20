@@ -1,10 +1,16 @@
 import './App.css';
-import Form from './components/Form';
+// import { FriendList } from './components/FriendList';
+// import RegisterForm from './components/RegisterForm';
+import RepeaterForm from './components/RepeaterForm';
+// import SignUp from './components/SignUp';
 
 function App() {
   return (
     <div className="App">
-      <Form/>
+      {/* <RegisterForm/> */}
+      {/* <SignUp/> */}
+      <RepeaterForm />
+      {/* <FriendList/> */}
     </div>
   );
 }

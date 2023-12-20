@@ -2,7 +2,7 @@ import { useFormik } from 'formik'
 import React from 'react'
 import * as Yup from 'yup'
 
-export default function Form() {
+export default function SignUp() {
 
     const initialValues = {
         name: '',
@@ -34,10 +34,10 @@ export default function Form() {
             .oneOf([Yup.ref('password')], 'password must be same'),
         addinfo: Yup.boolean(),
         addInfoText: Yup.string().when('addinfo', {
-                is: true,
-                // then: Yup.string().required("Add info field is required")
-                then: formSchema => formSchema.required('Add info field is required')
-            }),
+            is: true,
+            // then: Yup.string().required("Add info field is required")
+            then: formSchema => formSchema.required('Add info field is required')
+        }),
     })
 
     const formik = useFormik(({
